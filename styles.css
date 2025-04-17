@@ -1,0 +1,545 @@
+:root {
+    --primary-color: #003366;    /* Dunkelblau */
+    --accent-color: #FF6B00;     /* Orange */
+    --background-color: #FFFFFF; /* Weiß */
+    --text-color: #333333;
+    --light-gray: #f5f5f5;
+    --white: #fff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+
+/* Header und Navigation */
+header {
+    background-color: var(--primary-color);
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+}
+
+.logo img {
+    height: 50px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 2rem;
+}
+
+nav ul li a {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: var(--accent-color);
+}
+
+main {
+    margin-top: 80px;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(rgba(0,51,102,0.9),rgba(0,51,102,0.9)),url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80') center/cover;
+    color: var(--white);
+    text-align: center;
+    padding: 4rem 2rem;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+/* Sections */
+section {
+    padding: 4rem 2rem;
+}
+
+section h2 {
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+/* Services */
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.service-item {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.service-item:hover {
+    transform: translateY(-5px);
+}
+
+.service-item i {
+    font-size: 2.5rem;
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+}
+
+.service-item h3 {
+    color: var(--primary-color);
+    margin: 1rem 0;
+}
+
+.service-item p {
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+}
+
+/* Contact Section */
+.contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.contact-info {
+    padding: 2rem;
+    background-color: var(--primary-color);
+    color: var(--white);
+    border-radius: 8px;
+}
+
+.contact-info p {
+    margin-bottom: 1rem;
+}
+
+.contact-info i {
+    color: var(--accent-color);
+    margin-right: 0.5rem;
+}
+
+.contact-info a {
+    color: var(--white);
+    text-decoration: none;
+}
+
+.map iframe {
+    width: 100%;
+    border-radius: 8px;
+}
+
+/* Impressum und Datenschutz */
+.impressum,
+.datenschutz {
+    padding: 8rem 2rem 4rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.impressum h1,
+.datenschutz h1 {
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.impressum-content,
+.datenschutz-content {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.impressum h2,
+.datenschutz h2 {
+    color: var(--primary-color);
+    margin: 2rem 0 1rem;
+    font-size: 1.5rem;
+}
+
+.impressum h3,
+.datenschutz h3 {
+    color: var(--accent-color);
+    margin: 1.5rem 0 1rem;
+    font-size: 1.2rem;
+}
+
+.impressum h4,
+.datenschutz h4 {
+    color: var(--primary-color);
+    margin: 1rem 0;
+    font-size: 1.1rem;
+}
+
+.impressum p,
+.datenschutz p {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.impressum a,
+.datenschutz a {
+    color: var(--accent-color);
+    text-decoration: none;
+}
+
+.impressum a:hover,
+.datenschutz a:hover {
+    text-decoration: underline;
+}
+
+/* Footer Links */
+.footer-links {
+    margin-top: 1rem;
+}
+
+.footer-links a {
+    color: var(--white);
+    text-decoration: none;
+    margin: 0 1rem;
+}
+
+.footer-links a:hover {
+    color: var(--accent-color);
+}
+
+/* Footer */
+footer {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 2rem 0;
+    margin-top: 4rem;
+    text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .service-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+    
+    nav {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    nav ul {
+        margin-top: 1rem;
+    }
+    
+    nav ul li {
+        margin: 0 1rem;
+    }
+}
+
+/* Service Detail Pages */
+.service-detail {
+    padding: 8rem 2rem 4rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.service-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.service-header h1 {
+    color: var(--primary-color);
+    margin: 0;
+}
+
+.home-button {
+    background-color: var(--accent-color);
+    color: var(--white);
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: background-color 0.3s ease;
+}
+
+.home-button:hover {
+    background-color: #e65c00;
+}
+
+.service-content {
+    background-color: var(--white);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.service-text {
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.service-images {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.service-images img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 4px;
+    transition: transform 0.3s ease;
+}
+
+.service-images img:hover {
+    transform: scale(1.05);
+}
+
+/* Service Links */
+.service-link {
+    display: inline-block;
+    margin-top: 1rem;
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.service-link:hover {
+    color: var(--accent-color);
+}
+
+/* Responsive Design für Service Detail Pages */
+@media (max-width: 768px) {
+    .service-header {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+
+    .service-images {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Responsive Design für Services */
+@media (max-width: 1024px) {
+    .service-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .service-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.about {
+    padding: 4rem 2rem;
+    background-color: #f8f9fa;
+}
+
+.about-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: var(--white);
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.about h2 {
+    color: #003366;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+}
+
+.about h3 {
+    color: #003366;
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+    border-bottom: 2px solid #ff6600;
+    padding-bottom: 0.5rem;
+}
+
+.about p {
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+    color: #333;
+}
+
+.about .highlight {
+    color: var(--accent-color);
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+/* Testimonials Section */
+.testimonials {
+    padding: 4rem 2rem;
+    background-color: #f8f9fa;
+    overflow: hidden;
+}
+
+.testimonials h2 {
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 2.5rem;
+}
+
+.testimonial-slider {
+    overflow: hidden;
+    position: relative;
+    padding: 2rem 0;
+}
+
+.testimonial-track {
+    display: flex;
+    animation: slideTestimonials 30s linear infinite;
+}
+
+.testimonial-item {
+    min-width: 300px;
+    padding: 1rem;
+    margin: 0 1rem;
+    background: var(--white);
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.testimonial-item:hover {
+    transform: translateY(-5px);
+    transition: transform 0.3s ease;
+}
+
+.stars {
+    color: var(--accent-color);
+    margin-bottom: 0.5rem;
+}
+
+.testimonial-text {
+    flex-grow: 1;
+    font-style: italic;
+    margin-bottom: 1rem;
+    line-height: 1.6;
+    color: #555;
+}
+
+.testimonial-author {
+    font-weight: bold;
+    margin-top: 1rem;
+    color: var(--primary-color);
+}
+
+@keyframes slideTestimonials {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* Logo Stripe Animation */
+.logo-stripe {
+    background-color: var(--light-gray);
+    padding: 1.5rem 0;
+    overflow: hidden;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    position: relative;
+    height: 80px;
+}
+
+.logo-container {
+    display: flex;
+    position: absolute;
+    left: 0;
+    animation: moveLogo 20s linear infinite;
+    align-items: center;
+}
+
+.moving-logo {
+    height: 60px;
+    margin: 0 2rem;
+}
+
+@keyframes moveLogo {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* Responsive Design für Logo Stripe */
+@media (max-width: 768px) {
+    .logo-stripe {
+        height: 60px;
+        padding: 0.8rem 0;
+    }
+    
+    .moving-logo {
+        height: 40px;
+        margin: 0 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo-stripe {
+        height: 50px;
+        padding: 0.5rem 0;
+    }
+    
+    .moving-logo {
+        height: 35px;
+        margin: 0 1rem;
+    }
+}
